@@ -3,20 +3,42 @@
     font-size: 120%;
 }
 
-main {
-    max-inline-size: 25em;
-
+body {
     margin-block-start: 2rem;
     margin-inline: auto;
 
     padding-inline: 1rem;
 }
 
+p {
+    max-inline-size: 25em;
+}
+
+/* 
+    2em + 23em = 25em, 
+    to be the same width as paragraph 
+*/
+dl,
+ol,
+ul {
+    width: 23.5em;
+    -webkit-padding-start: 1.5em;
+}
+
+th {
+    text-align: start;
+}
+
+th, td {
+    padding-inline-end: 1em;
+}
+
 @media (min-width: 768px) {
-    main {
+    body {
         margin-block-start: 6rem;
         margin-inline: unset;
 
         padding-inline-start: 12.5%;
+        max-inline-size: 87.5%
     }
 }
