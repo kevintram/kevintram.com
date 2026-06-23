@@ -6,9 +6,9 @@
 }
 
 /* 2. Remove default margin */
-/* *:not(dialog) {
+*:not(dialog) {
     margin: 0;
-} */
+}
 
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
@@ -97,12 +97,17 @@ mark {
     background: var(--highlight-background);
 }
 
-p {
-    max-inline-size: 25em;
+p, h1, h2, h3, nav, table {
+    margin-block-start: 1em;
 }
 
 #primary-bio-section {
-    margin-block: 2rem;
+    margin-block-start: 3em;
+    margin-block-end: 4em;
+}
+
+p {
+    max-inline-size: 25em;
 }
 
 /*
