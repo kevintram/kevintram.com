@@ -218,8 +218,9 @@ thead,
     body {
         margin-block-start: 6rem;
         margin-inline: unset;
+        margin-inline-start: 12.5%;
 
-        padding-inline-start: 12.5%;
+        padding-inline: 0 1rem;
         inline-size: 87.5%;
         max-inline-size: 992px;
     }
