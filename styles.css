@@ -99,7 +99,7 @@ thead,
 
 .detail-by::before,
 .detail-length::before {
-    content: "·";
+    content: "·"; /* add interpunct */
     margin-inline: 0.35em;
 }
 
@@ -145,7 +145,7 @@ thead,
         display: none;
     }
 
-    .detail-by::before {
+    .detail-length::before {
         content: none;
     }
 }
@@ -168,6 +168,10 @@ thead,
 
     .detail-length {
         display: none;
+    }
+
+    .detail-by::before {
+        content: none;
     }
 
     td {
