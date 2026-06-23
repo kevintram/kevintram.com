@@ -14,31 +14,150 @@ p {
     max-inline-size: 25em;
 }
 
-/* 
-    2em + 23em = 25em, 
-    to be the same width as paragraph 
+/*
+    1.5em + 23.5em = 25em,
+    to be the same width as paragraph
 */
 dl,
 ol,
 ul {
-    width: 23.5em;
-    -webkit-padding-start: 1.5em;
+    max-inline-size: 23.5em;
+    padding-inline-start: 1.5em;
+}
+
+th,
+td {
+    padding-inline-end: 1em;
 }
 
 th {
     text-align: start;
 }
 
-th, td {
-    padding-inline-end: 1em;
+td {
+    vertical-align: middle;
+    padding-block: 0.5em;
 }
 
-@media (min-width: 768px) {
+table {
+    inline-size: 100%;
+}
+
+thead,
+.what-column,
+.by-column,
+.length-column {
+    display: none;
+}
+
+.image-column img {
+    display: block;
+    inline-size: 48px;
+    block-size: 48px;
+    object-fit: cover;
+}
+
+.item-text {
+    min-inline-size: 0;
+}
+
+.item-details {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.8em;
+}
+
+.detail-by::before,
+.detail-length::before {
+    content: "·";
+    margin-inline: 0.35em;
+}
+
+/* phone-only hacks */
+@media (width < 576px) {
+    table {
+        table-layout: fixed;
+    }
+
+    .number-column {
+        inline-size: 1.5rem;
+        padding-inline-end: 0.5em;
+    }
+
+    .image-column {
+        inline-size: 48px;
+        padding-inline-end: 0;
+    }
+
+    .name-column {
+        overflow: hidden;
+    }
+
+    .item-text > a {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+/* reveal what-column */
+@media (width >= 576px) {
+    thead {
+        display: table-header-group;
+    }
+
+    .what-column {
+        display: table-cell;
+    }
+
+    .detail-type {
+        display: none;
+    }
+
+    .detail-by::before {
+        content: none;
+    }
+}
+
+/* reveal length-column */
+@media (width >= 768px) {
     body {
         margin-block-start: 6rem;
         margin-inline: unset;
 
         padding-inline-start: 12.5%;
-        max-inline-size: 87.5%
+        inline-size: 87.5%;
+        max-inline-size: 1280px;
+    }
+
+    .length-column {
+        display: table-cell;
+        inline-size: 6rem;
+    }
+
+    .detail-length {
+        display: none;
+    }
+
+    td {
+        padding-block: 0;
+    }
+}
+
+/* reveal by-column */
+@media (width >= 992px) {
+    .by-column {
+        display: table-cell;
+    }
+
+    .length-column {
+        inline-size: auto;
+    }
+
+    .item-details {
+        display: none;
     }
 }
