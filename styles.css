@@ -97,8 +97,23 @@ mark {
     background: var(--highlight-background);
 }
 
-p, h1, h2, h3, nav, table {
+p, nav, table {
     margin-block-start: 1em;
+}
+
+h1 {
+    margin-block-start: 4rem;
+    margin-block-end: 1.5rem;
+}
+
+h2 {
+    margin-block-start: 2.1rem;
+    margin-block-end: 1.4rem;
+}
+
+h3 {
+    margin-block-start: 2rem;
+    margin-block-end: 1.4rem;
 }
 
 #primary-bio-section {
