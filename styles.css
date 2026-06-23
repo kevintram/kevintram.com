@@ -101,6 +101,10 @@ p {
     max-inline-size: 25em;
 }
 
+#primary-bio-section {
+    margin-block: 2rem;
+}
+
 /*
     1.5em + 23.5em = 25em,
     to be the same width as paragraph
