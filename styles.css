@@ -3,7 +3,9 @@
     font-size: 120%;
 
     --text-primary: oklch(17.764% 0 none);
+    --text-on-highlight: oklch(17.764% 0 none);
     --background: oklch(99.809% 0.00918 106.565);
+    --highlight-background: oklch(88.36% 0.12898 93.666);
 }
 
 /* Dark Mode! */
@@ -29,6 +31,11 @@ a:visited {
     color: inherit;
     text-underline-offset: 0.1em;
     text-decoration-thickness: 0.05em;
+}
+
+mark {
+    color: var(--text-on-highlight);
+    background: var(--highlight-background);
 }
 
 p {
