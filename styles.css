@@ -93,9 +93,13 @@ h1, h2, h3, h4, h5, h6 {
     font-synthesis: none;
 
     --text-primary: oklch(17.764% 0 none);
-    --text-on-highlight: oklch(17.764% 0 none);
     --background: oklch(99.809% 0.00918 106.565);
+
+    --text-on-highlight: oklch(17.764% 0 none);
     --highlight-background: oklch(88.36% 0.12898 93.666);
+
+    --text-on-sidenote-highlight: var(--background);
+    --sidenote-highlight-background: oklch(37.851% 0.19541 263.229);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -113,6 +117,8 @@ td {
     :root {
         --text-primary: oklch(89.755% 0 none);
         --background: oklch(19.573% 0 none);
+        
+        --text-on-sidenote-highlight: var(--text-primary);
     }
 }
 
@@ -374,6 +380,17 @@ thead,
 
     .sidenote-backref {
         display: inline;
+    }
+
+    .sidenote-ref:hover .sidenote-number,
+    .sidenote-ref:has(+ .sidenote:hover) .sidenote-number,
+    .sidenote-ref:has(+ .sidenote:focus-within) .sidenote-number,
+    .sidenote-ref:hover + .sidenote,
+    .sidenote-ref:focus-within + .sidenote,
+    .sidenote:hover,
+    .sidenote:focus-within {
+        color: var(--text-on-sidenote-highlight);
+        background: var(--sidenote-highlight-background);
     }
 }
 
