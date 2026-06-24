@@ -179,18 +179,50 @@ h3 {
     margin-block-end: 4em;
 }
 
+.sidenote-ref {
+    display: none;
+}
+
+.sidenote-number {
+    font-size: 0.7em;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.sidenote {
+    font-size: 0.75rem;
+    line-height: 1.35;
+}
+
+.sidenote::before {
+    content: " (";
+}
+
+.sidenote::after {
+    content: ")";
+}
+
+.sidenote-backref {
+    display: none;
+    margin-inline-end: 0.25em;
+    font-size: 0.75em;
+    line-height: 0;
+    text-decoration: none;
+    vertical-align: super;
+}
+
 p {
-    max-inline-size: 25em;
+    max-inline-size: 26em;
 }
 
 /*
-    1.5em + 23.5em = 25em,
+    1.5em + 24.4em = 26em,
     to be the same width as paragraph
 */
 dl,
 ol,
 ul {
-    max-inline-size: 23.5em;
+    max-inline-size: 24.5em;
     padding-inline-start: 1.5em;
 }
 
@@ -318,6 +350,32 @@ thead,
 
     td {
         padding-block: 0;
+    }
+
+    .sidenote-ref {
+        display: inline;
+    }
+
+    .sidenote {
+        float: right;
+        clear: right;
+        margin-inline-end: -60%;
+        width: 50%;
+        margin-top: 0.3rem;
+        margin-bottom: 0;
+        font-size: 0.8em;
+        line-height: 1.3;
+        vertical-align: baseline;
+        position: relative;
+    }
+
+    .sidenote::before,
+    .sidenote::after {
+        content: none;
+    }
+
+    .sidenote-backref {
+        display: inline;
     }
 }
 
