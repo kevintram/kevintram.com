@@ -183,10 +183,6 @@ h6 {
     margin-block-end: 4em;
 }
 
-.sidenote-anchor {
-    white-space: nowrap;
-}
-
 .sidenote-ref {
     display: inline-block;
     padding-inline: 0.1em;
