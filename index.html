@@ -275,21 +275,61 @@
       (() => {
         const highlightedSelector = ".sidenote-ref.is-highlighted, .sidenote.is-highlighted, .mobile-footnote.is-highlighted";
         const refs = Array.from(document.querySelectorAll(".sidenote-ref"));
+        const footnoteBackrefs = Array.from(document.querySelectorAll(".mobile-footnote > .sidenote-backref"));
+        const highlightDurationMs = 900;
+        let highlightTimerId;
 
         const getNoteClass = (element) =>
           Array.from(element.classList).find((className) => className.startsWith("note-"));
 
         const clearHighlights = () => {
+          if (highlightTimerId) {
+            window.clearTimeout(highlightTimerId);
+            highlightTimerId = undefined;
+          }
+
           document
             .querySelectorAll(highlightedSelector)
             .forEach((element) => element.classList.remove("is-highlighted"));
 
           refs.forEach((ref) => ref.setAttribute("aria-pressed", "false"));
+          footnoteBackrefs.forEach((backref) => backref.setAttribute("aria-pressed", "false"));
+        };
+
+        const highlightNote = (noteClass) => {
+          document.querySelectorAll(`.sidenote-ref.${noteClass}`).forEach((ref) => {
+            ref.classList.add("is-highlighted");
+            ref.setAttribute("aria-pressed", "true");
+
+            const sidenoteId = ref.querySelector(".sidenote-number")?.getAttribute("aria-describedby");
+
+            if (sidenoteId) {
+              document.getElementById(sidenoteId)?.classList.add("is-highlighted");
+            }
+          });
+
+          document.querySelectorAll(`.mobile-footnote.${noteClass}`).forEach((footnote) => {
+            footnote.classList.add("is-highlighted");
+            footnote
+              .querySelector(".sidenote-backref")
+              ?.setAttribute("aria-pressed", "true");
+          });
+        };
+
+        const flashNote = (noteClass, event) => {
+          event.stopPropagation();
+          clearHighlights();
+          void document.body.offsetWidth;
+          highlightNote(noteClass);
+
+          highlightTimerId = window.setTimeout(() => {
+            highlightTimerId = undefined;
+            clearHighlights();
+          }, highlightDurationMs);
         };
 
         refs.forEach((ref) => {
           const noteClass = getNoteClass(ref);
-          const sidenoteId = ref.querySelector(".sidenote-number")?.getAttribute("aria-describedby");
 
           if (!noteClass) {
             return;
@@ -299,33 +339,31 @@
           ref.setAttribute("tabindex", "0");
           ref.setAttribute("aria-pressed", "false");
 
-          const toggleHighlight = (event) => {
-            event.stopPropagation();
-
-            const wasHighlighted = ref.classList.contains("is-highlighted");
-            clearHighlights();
-
-            if (wasHighlighted) {
-              return;
-            }
-
-            ref.classList.add("is-highlighted");
-            ref.setAttribute("aria-pressed", "true");
-
-            if (sidenoteId) {
-              document.getElementById(sidenoteId)?.classList.add("is-highlighted");
-            }
-
-            document
-              .querySelectorAll(`.mobile-footnote.${noteClass}`)
-              .forEach((footnote) => footnote.classList.add("is-highlighted"));
-          };
-
-          ref.addEventListener("click", toggleHighlight);
+          ref.addEventListener("click", (event) => flashNote(noteClass, event));
           ref.addEventListener("keydown", (event) => {
             if (event.key === "Enter" || event.key === " ") {
               event.preventDefault();
-              toggleHighlight(event);
+              flashNote(noteClass, event);
+            }
+          });
+        });
+
+        footnoteBackrefs.forEach((backref) => {
+          const noteClass = getNoteClass(backref.closest(".mobile-footnote"));
+
+          if (!noteClass) {
+            return;
+          }
+
+          backref.setAttribute("role", "button");
+          backref.setAttribute("tabindex", "0");
+          backref.setAttribute("aria-pressed", "false");
+
+          backref.addEventListener("click", (event) => flashNote(noteClass, event));
+          backref.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              flashNote(noteClass, event);
             }
           });
         });

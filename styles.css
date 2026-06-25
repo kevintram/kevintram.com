@@ -225,6 +225,13 @@ h6 {
     vertical-align: super;
 }
 
+.mobile-footnote > .sidenote-backref {
+    cursor: pointer;
+    line-height: 1;
+    padding-block: 0.2rem;
+    touch-action: manipulation;
+}
+
 .mobile-footnotes {
     display: grid;
     gap: 0.35rem;
@@ -249,9 +256,50 @@ h6 {
 .sidenote-ref.is-highlighted .sidenote-number,
 .sidenote.is-highlighted,
 .mobile-footnote.is-highlighted {
-    color: var(--text-on-sidenote-highlight);
-    background: var(--sidenote-highlight-background);
-    transition-duration: 0s;
+    animation: footnote-highlight-flash 0.9s ease-out;
+}
+
+@keyframes footnote-highlight-flash {
+    0% {
+        color: var(--text-primary);
+        background: transparent;
+    }
+
+    14% {
+        color: var(--text-on-sidenote-highlight);
+        background: var(--sidenote-highlight-background);
+    }
+
+    100% {
+        color: var(--text-primary);
+        background: transparent;
+    }
+}
+
+@media (hover: hover) {
+    .sidenote-ref:hover,
+    .sidenote-ref:hover .sidenote-number,
+    .sidenote-number:hover,
+    .mobile-footnote:hover,
+    p:has(.note-stealth-projects:hover) + .mobile-footnotes .note-stealth-projects,
+    p:has(.note-uf-year:hover) + .mobile-footnotes .note-uf-year,
+    p:has(.note-relocating:hover) + .mobile-footnotes .note-relocating,
+    p:has(.note-sivers:hover) + .mobile-footnotes .note-sivers,
+    p:has(.note-big-questions:hover) + .mobile-footnotes .note-big-questions,
+    #primary-bio-section:has(.mobile-footnote.note-stealth-projects:hover) .sidenote-ref.note-stealth-projects,
+    #primary-bio-section:has(.mobile-footnote.note-uf-year:hover) .sidenote-ref.note-uf-year,
+    #primary-bio-section:has(.mobile-footnote.note-relocating:hover) .sidenote-ref.note-relocating,
+    #primary-bio-section:has(.mobile-footnote.note-sivers:hover) .sidenote-ref.note-sivers,
+    #primary-bio-section:has(.mobile-footnote.note-big-questions:hover) .sidenote-ref.note-big-questions,
+    #primary-bio-section:has(.mobile-footnote.note-stealth-projects:hover) .sidenote-ref.note-stealth-projects .sidenote-number,
+    #primary-bio-section:has(.mobile-footnote.note-uf-year:hover) .sidenote-ref.note-uf-year .sidenote-number,
+    #primary-bio-section:has(.mobile-footnote.note-relocating:hover) .sidenote-ref.note-relocating .sidenote-number,
+    #primary-bio-section:has(.mobile-footnote.note-sivers:hover) .sidenote-ref.note-sivers .sidenote-number,
+    #primary-bio-section:has(.mobile-footnote.note-big-questions:hover) .sidenote-ref.note-big-questions .sidenote-number {
+        color: var(--text-on-sidenote-highlight);
+        background: var(--sidenote-highlight-background);
+        transition-duration: 0s;
+    }
 }
 
 p {
@@ -422,6 +470,19 @@ thead,
         display: none;
     }
 
+    @media (hover: hover) {
+        .sidenote-ref:hover .sidenote-number,
+        .sidenote-ref:has(+ .sidenote:hover) .sidenote-number,
+        .sidenote-ref:has(+ .sidenote:focus-within) .sidenote-number,
+        .sidenote-ref:hover + .sidenote,
+        .sidenote-ref:focus-within + .sidenote,
+        .sidenote:hover,
+        .sidenote:focus-within {
+            color: var(--text-on-sidenote-highlight);
+            background: var(--sidenote-highlight-background);
+            transition-duration: 0s;
+        }
+    }
 }
 
 /* reveal by-column */
