@@ -271,5 +271,72 @@
         </section>
       </section>
     </main>
+    <script>
+      (() => {
+        const highlightedSelector = ".sidenote-ref.is-highlighted, .sidenote.is-highlighted, .mobile-footnote.is-highlighted";
+        const refs = Array.from(document.querySelectorAll(".sidenote-ref"));
+
+        const getNoteClass = (element) =>
+          Array.from(element.classList).find((className) => className.startsWith("note-"));
+
+        const clearHighlights = () => {
+          document
+            .querySelectorAll(highlightedSelector)
+            .forEach((element) => element.classList.remove("is-highlighted"));
+
+          refs.forEach((ref) => ref.setAttribute("aria-pressed", "false"));
+        };
+
+        refs.forEach((ref) => {
+          const noteClass = getNoteClass(ref);
+          const sidenoteId = ref.querySelector(".sidenote-number")?.getAttribute("aria-describedby");
+
+          if (!noteClass) {
+            return;
+          }
+
+          ref.setAttribute("role", "button");
+          ref.setAttribute("tabindex", "0");
+          ref.setAttribute("aria-pressed", "false");
+
+          const toggleHighlight = (event) => {
+            event.stopPropagation();
+
+            const wasHighlighted = ref.classList.contains("is-highlighted");
+            clearHighlights();
+
+            if (wasHighlighted) {
+              return;
+            }
+
+            ref.classList.add("is-highlighted");
+            ref.setAttribute("aria-pressed", "true");
+
+            if (sidenoteId) {
+              document.getElementById(sidenoteId)?.classList.add("is-highlighted");
+            }
+
+            document
+              .querySelectorAll(`.mobile-footnote.${noteClass}`)
+              .forEach((footnote) => footnote.classList.add("is-highlighted"));
+          };
+
+          ref.addEventListener("click", toggleHighlight);
+          ref.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              toggleHighlight(event);
+            }
+          });
+        });
+
+        document.addEventListener("click", clearHighlights);
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            clearHighlights();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
