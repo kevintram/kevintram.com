@@ -148,6 +148,11 @@ p, nav, table {
     margin-block-start: 1em;
 }
 
+caption {
+    text-align: start;
+    font-weight: bold;
+}
+
 h1 {
     font-size: calc(2em * var(--heading-scale));
     margin-block-start: 4rem;
