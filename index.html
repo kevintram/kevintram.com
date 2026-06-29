@@ -276,8 +276,10 @@
         const highlightedSelector = ".sidenote-ref.is-highlighted, .sidenote.is-highlighted, .mobile-footnote.is-highlighted";
         const refs = Array.from(document.querySelectorAll(".sidenote-ref"));
         const footnoteBackrefs = Array.from(document.querySelectorAll(".mobile-footnote > .sidenote-backref"));
+        const mobileFootnotesQuery = window.matchMedia("(width < 768px)");
         const highlightDurationMs = 900;
         let highlightTimerId;
+        const refControls = [];
 
         const getNoteClass = (element) =>
           Array.from(element.classList).find((className) => className.startsWith("note-"));
@@ -292,8 +294,16 @@
             .querySelectorAll(highlightedSelector)
             .forEach((element) => element.classList.remove("is-highlighted"));
 
-          refs.forEach((ref) => ref.setAttribute("aria-pressed", "false"));
-          footnoteBackrefs.forEach((backref) => backref.setAttribute("aria-pressed", "false"));
+          refs.forEach((ref) => {
+            if (ref.hasAttribute("aria-pressed")) {
+              ref.setAttribute("aria-pressed", "false");
+            }
+          });
+          footnoteBackrefs.forEach((backref) => {
+            if (backref.hasAttribute("aria-pressed")) {
+              backref.setAttribute("aria-pressed", "false");
+            }
+          });
         };
 
         const highlightNote = (noteClass) => {
@@ -335,17 +345,44 @@
             return;
           }
 
-          ref.setAttribute("role", "button");
-          ref.setAttribute("tabindex", "0");
-          ref.setAttribute("aria-pressed", "false");
-
-          ref.addEventListener("click", (event) => flashNote(noteClass, event));
-          ref.addEventListener("keydown", (event) => {
+          const handleClick = (event) => flashNote(noteClass, event);
+          const handleKeydown = (event) => {
             if (event.key === "Enter" || event.key === " ") {
               event.preventDefault();
               flashNote(noteClass, event);
             }
+          };
+
+          refControls.push({ ref, handleClick, handleKeydown, isActive: false });
+        });
+
+        const setMobileRefControls = () => {
+          refControls.forEach((control) => {
+            if (mobileFootnotesQuery.matches && !control.isActive) {
+              control.ref.setAttribute("role", "button");
+              control.ref.setAttribute("tabindex", "0");
+              control.ref.setAttribute("aria-pressed", "false");
+              control.ref.addEventListener("click", control.handleClick);
+              control.ref.addEventListener("keydown", control.handleKeydown);
+              control.isActive = true;
+              return;
+            }
+
+            if (!mobileFootnotesQuery.matches && control.isActive) {
+              control.ref.removeAttribute("role");
+              control.ref.removeAttribute("tabindex");
+              control.ref.removeAttribute("aria-pressed");
+              control.ref.removeEventListener("click", control.handleClick);
+              control.ref.removeEventListener("keydown", control.handleKeydown);
+              control.isActive = false;
+            }
           });
+        };
+
+        setMobileRefControls();
+        mobileFootnotesQuery.addEventListener("change", () => {
+          clearHighlights();
+          setMobileRefControls();
         });
 
         footnoteBackrefs.forEach((backref) => {
