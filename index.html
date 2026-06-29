@@ -1,507 +1,755 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="preload"
-      href="assets/fonts/jetbrains-mono/jetbrains-mono-variable-latin.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="assets/fonts/pixelify-sans/pixelify-sans-variable-latin.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Kevin Tram</title>
-  </head>
 
-  <body>
-    <main>
-      <h1>Kevin Tram</h1>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" href="assets/fonts/jetbrains-mono/jetbrains-mono-variable-latin.woff2" as="font" type="font/woff2"
+    crossorigin />
+  <link rel="preload" href="assets/fonts/pixelify-sans/pixelify-sans-variable-latin.woff2" as="font" type="font/woff2"
+    crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Kevin Tram</title>
+</head>
 
-      <section id="primary-bio-section">
-        <p>I'm a software engineer. I strive to make good things :).</p>
+<body>
+  <main>
+    <h1>Kevin Tram</h1>
 
-        <!--
+    <section id="primary-bio-section">
+      <p>I'm a software engineer. I strive to make good things :).</p>
+
+      <!--
           Sidenotes are whitespace-sensitive: the marker must touch the word
           before it and the note must touch the marker, so each marker+note
           unit is kept on a single line.
         -->
-        <p>
-          Currently exploring some stealth
-          projects<sup class="sidenote-ref note-stealth-projects"><span class="sidenote-number" aria-describedby="sn-stealth-projects">1</span></sup><span class="sidenote" id="sn-stealth-projects"><span class="sidenote-backref">1</span>me: <a href="https://youtube.com/shorts/EqXBrT8h98I" target="_blank" rel="noopener noreferrer">https://youtube.com/shorts/EqXBrT8h98I</a></span>.
-        </p>
-        <!--
+      <p>
+        Currently exploring some stealth
+        projects<sup class="sidenote-ref note-stealth-projects"><span class="sidenote-number"
+            aria-describedby="sn-stealth-projects">1</span></sup><span class="sidenote" id="sn-stealth-projects"><span
+            class="sidenote-backref">1</span>me: <a href="https://youtube.com/shorts/EqXBrT8h98I" target="_blank"
+            rel="noopener noreferrer">https://youtube.com/shorts/EqXBrT8h98I</a></span>.
+      </p>
+      <!--
           Mobile footnotes are duplicated in hardcoded blocks after each
           paragraph so they can sit below the text without JavaScript. Keep each
           .note-* class paired with the matching inline sidenote marker so CSS
           hover highlighting can connect the two.
         -->
-        <div class="mobile-footnotes" aria-label="Footnotes">
-          <span class="mobile-footnote note-stealth-projects"><span class="sidenote-backref">1</span>me: <a href="https://youtube.com/shorts/EqXBrT8h98I" target="_blank" rel="noopener noreferrer">https://youtube.com/shorts/EqXBrT8h98I</a></span>
-        </div>
+      <div class="mobile-footnotes" aria-label="Footnotes">
+        <span class="mobile-footnote note-stealth-projects"><span class="sidenote-backref">1</span>me: <a
+            href="https://youtube.com/shorts/EqXBrT8h98I" target="_blank"
+            rel="noopener noreferrer">https://youtube.com/shorts/EqXBrT8h98I</a></span>
+      </div>
 
-        <p>
-          <mark><strong>I AM OPEN TO WORK! (ANYWHERE!)</strong></mark>
-        </p>
+      <p>
+        <mark><strong>I AM OPEN TO WORK! (ANYWHERE!)</strong></mark>
+      </p>
 
-        <p>
-          I grew up in an
-          <a href="https://en.wikipedia.org/wiki/Exton,_Pennsylvania" target="_blank" rel="noopener noreferrer" title="Exton, Pennsylvania">outer 'burb</a>
-          of Philly, did my CS undergrad at UF<sup class="sidenote-ref note-uf-year"><span class="sidenote-number" aria-describedby="sn-uf-year">2</span></sup><span class="sidenote" id="sn-uf-year"><span class="sidenote-backref">2</span>'23</span>,
-          currently living in Philly<sup class="sidenote-ref note-relocating"><span class="sidenote-number" aria-describedby="sn-relocating">3</span></sup><span class="sidenote" id="sn-relocating"><span class="sidenote-backref">3</span>but *definitely* open to relocating!</span>.
-          Previously, SWE at JPMC; I left last year to live in Osaka, Japan for 3 months
-          alone<sup class="sidenote-ref note-sivers"><span class="sidenote-number" aria-describedby="sn-sivers">4</span></sup><span class="sidenote" id="sn-sivers"><span class="sidenote-backref">4</span>in the spirit of <a href="https://sive.rs/dc" target="_blank" rel="noopener noreferrer">Derek Sivers</a>!</span>
-          to try and answer some pressing
-          questions<sup class="sidenote-ref note-big-questions"><span class="sidenote-number" aria-describedby="sn-big-questions">5</span></sup><span class="sidenote" id="sn-big-questions"><span class="sidenote-backref">5</span>mostly big ones; they are mostly answered now :)</span>.
-        </p>
-        <div class="mobile-footnotes" aria-label="Footnotes">
-          <span class="mobile-footnote note-uf-year"><span class="sidenote-backref">2</span>'23</span>
-          <span class="mobile-footnote note-relocating"><span class="sidenote-backref">3</span>but *definitely* open to relocating!</span>
-          <span class="mobile-footnote note-sivers"><span class="sidenote-backref">4</span>in the spirit of <a href="https://sive.rs/dc" target="_blank" rel="noopener noreferrer">Derek Sivers</a>!</span>
-          <span class="mobile-footnote note-big-questions"><span class="sidenote-backref">5</span>mostly big ones; they are mostly answered now :)</span>
-        </div>
+      <p>
+        I grew up in an
+        <a href="https://en.wikipedia.org/wiki/Exton,_Pennsylvania" target="_blank" rel="noopener noreferrer"
+          title="Exton, Pennsylvania">outer 'burb</a>
+        of Philly, did my CS undergrad at UF<sup class="sidenote-ref note-uf-year"><span class="sidenote-number"
+            aria-describedby="sn-uf-year">2</span></sup><span class="sidenote" id="sn-uf-year"><span
+            class="sidenote-backref">2</span>'23</span>,
+        currently living in Philly<sup class="sidenote-ref note-relocating"><span class="sidenote-number"
+            aria-describedby="sn-relocating">3</span></sup><span class="sidenote" id="sn-relocating"><span
+            class="sidenote-backref">3</span>but *definitely* open to relocating!</span>.
+        Previously, SWE at JPMC; I left last year to live in Osaka, Japan for 3 months
+        alone<sup class="sidenote-ref note-sivers"><span class="sidenote-number"
+            aria-describedby="sn-sivers">4</span></sup><span class="sidenote" id="sn-sivers"><span
+            class="sidenote-backref">4</span>in the spirit of <a href="https://sive.rs/dc" target="_blank"
+            rel="noopener noreferrer">Derek Sivers</a>!</span>
+        to try and answer some pressing
+        questions<sup class="sidenote-ref note-big-questions"><span class="sidenote-number"
+            aria-describedby="sn-big-questions">5</span></sup><span class="sidenote" id="sn-big-questions"><span
+            class="sidenote-backref">5</span>mostly big ones; they are mostly answered now :)</span>.
+      </p>
+      <div class="mobile-footnotes" aria-label="Footnotes">
+        <span class="mobile-footnote note-uf-year"><span class="sidenote-backref">2</span>'23</span>
+        <span class="mobile-footnote note-relocating"><span class="sidenote-backref">3</span>but *definitely* open to
+          relocating!</span>
+        <span class="mobile-footnote note-sivers"><span class="sidenote-backref">4</span>in the spirit of <a
+            href="https://sive.rs/dc" target="_blank" rel="noopener noreferrer">Derek Sivers</a>!</span>
+        <span class="mobile-footnote note-big-questions"><span class="sidenote-backref">5</span>mostly big ones; they
+          are mostly answered now :)</span>
+      </div>
 
-        <nav aria-label="Contact">
-          <a href="https://github.com/kevintram" target="_blank" rel="noopener noreferrer">github</a>
-          ·
-          <a href="https://www.linkedin.com/in/kevin-tram/" target="_blank" rel="noopener noreferrer">linkedin</a>
-          ·
-          <a href="mailto:kevintram.78@gmail.com">email</a>
-          ·
-          <a href="assets/kevin-tram-resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
-        </nav>
-      </section>
+      <nav aria-label="Contact">
+        <a href="https://github.com/kevintram" target="_blank" rel="noopener noreferrer">github</a>
+        ·
+        <a href="https://www.linkedin.com/in/kevin-tram/" target="_blank" rel="noopener noreferrer">linkedin</a>
+        ·
+        <a href="mailto:kevintram.78@gmail.com">email</a>
+        ·
+        <a href="assets/kevin-tram-resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+      </nav>
+    </section>
 
-      <section aria-labelledby="more-heading">
-        <h2 id="more-heading">More</h2>
+    <section aria-labelledby="more-heading">
+      <h2 id="more-heading">More</h2>
 
-        <p>Some things:</p>
-        <ul>
-          <li>I'm definitely a generalist.</li>
-          <li>I want to build great products.</li>
-          <li>I really like craft, beauty, and speed.</li>
-        </ul>
+      <p>Some things:</p>
+      <ul>
+        <li>I'm definitely a generalist.</li>
+        <li>I want to build great products.</li>
+        <li>I really like craft, beauty, and speed.</li>
+      </ul>
 
-        <p>
-          Outside of coding, I have many interests including (but not exclusive
-          to) lifting, daily routines, writing, anthropology, evolutionary
-          theory, design, cognitive/learning science, economics, fiction, food,
-          and film.
-        </p>
+      <p>
+        Outside of coding, I have many interests including (but not exclusive
+        to) lifting, daily routines, writing, anthropology, evolutionary
+        theory, design, cognitive/learning science, economics, fiction, food,
+        and film.
+      </p>
 
+      <section aria-labelledby="favorite-things-heading">
+        <h3 id="favorite-things-heading">Some of my favorite things:</h3>
 
-        <section aria-labelledby="music-heading">
-            <h3 id="music-heading">Music</h3>
-
-            <p>
-                I am kind of always listening to music.
-                I like a lot of different genres from r&b
-                to post-classical to midwest emo.
-            </p>
-
-
-            <table>
-              <caption>A selection of songs I like a lot:</caption>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>title</th>
-                        <th>artist</th>
-                        <th>my notes</th>
-                    </tr>                    
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>NO SZNS</td>
-                        <td>Jean Dawson, SZA</td>
-                        <td>ethereal r&amp;b pop mishmash</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Wave of Light</td>
-                        <td>Masakatsu Takagi</td>
-                        <td>piano like a wave of light</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>YYZ</td>
-                        <td>Rush</td>
-                        <td>ding da ding ding ding</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>School Social</td>
-                        <td>Invalids</td>
-                        <td>mathy math rock</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Love Is Everywhere</td>
-                        <td>Pharoah Sanders</td>
-                        <td>cosmic, spiritual jazz</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Amour</td>
-                        <td>Jean-Michel Blais</td>
-                        <td>beautiful post-classical</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Reaper</td>
-                        <td>Clairo</td>
-                        <td>soft, like pillow</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>untitled 06</td>
-                        <td>Kendrick Lamar</td>
-                        <td>jazzy jazz rap</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Northern Attitude</td>
-                        <td>Noah Kahan, Hozier</td>
-                        <td>folk pop, like gospel</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Grieving</td>
-                        <td>Leith Ross</td>
-                        <td>happy sad indie, make me cry ;-;</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>Naruto Themed Sexting</td>
-                        <td>Panucci's Pizza</td>
-                        <td>folky midwest emo</td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>Ultralight Beam</td>
-                        <td>Kanye</td>
-                        <td>WE DON'T WANT NO DEVILS IN THE HOUSE</td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Voice of the Soul</td>
-                        <td>Death</td>
-                        <td>beautiful, crushing metal</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </section>
-
-        <section aria-labelledby="favorite-things-heading">
-          <h3 id="favorite-things-heading">Some of my favorite things:</h3>
-
-          <!--
+        <!--
             The .detail spans inside .item-details are inline and separated only
             by their CSS ::before interpunct, so they must sit flush with no
             whitespace between them.
           -->
-          <table>
-            <thead>
-              <tr>
-                <th class="number-column">#</th>
-                <th class="what-column">what</th>
-                <th class="name-column">name</th>
-                <th class="by-column">by</th>
-                <th class="length-column">length</th>
-                <th class="image-column" aria-label="image"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="number-column">1</td>
-                <td class="what-column"><span>poem</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://www.poetryfoundation.org/poems/1626022/the-two-headed-calf" target="_blank" rel="noopener noreferrer">The Two-Headed Calf</a>
-                    <span class="item-details"><span class="detail detail-type">poem</span><span class="detail detail-length">9 lines</span><span class="detail detail-by">Laura Gilpin</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>Laura Gilpin</span></td>
-                <td class="length-column"><span>9 lines</span></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/two-headed-calf.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-              <tr>
-                <td class="number-column">2</td>
-                <td class="what-column"><span>short story</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://static1.squarespace.com/static/509c7909e4b0e15f9ab04cd6/t/578c2552bebafb8c814a511e/1468802386511/Marquez_A+Very+Old+Man+With+Enormous+Wings.pdf" target="_blank" rel="noopener noreferrer">A Very Old Man With Enormous Wings</a>
-                    <span class="item-details"><span class="detail detail-type">short story</span><span class="detail detail-length">2834 words</span><span class="detail detail-by">Gabriel García Márquez</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>Gabriel García Márquez</span></td>
-                <td class="length-column"><span>2834 words</span></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/marquez.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-              <tr>
-                <td class="number-column">3</td>
-                <td class="what-column"><span>anime</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://www.imdb.com/title/tt1017084/?ref_=ext_shr_lnk" target="_blank" rel="noopener noreferrer">Mushishi S1E19: String of Heaven</a>
-                    <span class="item-details"><span class="detail detail-type">anime</span><span class="detail detail-length">23m</span><span class="detail detail-by">Yuki Urushibara</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>Yuki Urushibara</span></td>
-                <td class="length-column"><span>23m</span></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/mushishi.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-              <tr>
-                <td class="number-column">4</td>
-                <td class="what-column"><span>podcast</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://www.thisamericanlife.org/765/off-course" target="_blank" rel="noopener noreferrer">This American Life #765: Off Course</a>
-                    <span class="item-details"><span class="detail detail-type">podcast</span><span class="detail detail-length">1h 6m</span><span class="detail detail-by">This American Life</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>This American Life</span></td>
-                <td class="length-column"><span>1h 6m</span></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/off-course.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-              <tr>
-                <td class="number-column">5</td>
-                <td class="what-column"><span>film</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://www.imdb.com/title/tt0244316/" target="_blank" rel="noopener noreferrer">Yi Yi</a>
-                    <span class="item-details"><span class="detail detail-type">film</span><span class="detail detail-length">2h 54m</span><span class="detail detail-by">Edward Yang</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>Edward Yang</span></td>
-                <td class="length-column"><span>2h 54m</span></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/yi-yi.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-              <tr>
-                <td class="number-column">6</td>
-                <td class="what-column"><span>book</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://www.masoncurrey.com/daily-rituals" target="_blank" rel="noopener noreferrer">Daily Rituals</a>
-                    <span class="item-details"><span class="detail detail-type">book</span><span class="detail detail-length">278 pages</span><span class="detail detail-by">Mason Currey</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>Mason Currey</span></td>
-                <td class="length-column"><span>278 pages</span></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/daily-rituals.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-              <tr>
-                <td class="number-column">7</td>
-                <td class="what-column"><span>book</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://www.amazon.com/Mothers-Others-Evolutionary-Origins-Understanding/dp/0674060326" target="_blank" rel="noopener noreferrer">Mothers and Others</a>
-                    <span class="item-details"><span class="detail detail-type">book</span><span class="detail detail-length">432 pages</span><span class="detail detail-by">Sarah Blaffer Hrdy</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>Sarah Blaffer Hrdy</span></td>
-                <td class="length-column"><span>432 pages</span></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/mothers.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-              <tr>
-                <td class="number-column">8</td>
-                <td class="what-column"><span>novel</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://www.amazon.com/Makioka-Sisters-Junichiro-Tanizaki/dp/0679761640" target="_blank" rel="noopener noreferrer">Makioka Sisters</a>
-                    <span class="item-details"><span class="detail detail-type">novel</span><span class="detail detail-length">544 pages</span><span class="detail detail-by">Jun'ichirō Tanizaki</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>Jun'ichirō Tanizaki</span></td>
-                <td class="length-column"><span>544 pages</span></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/makioka-sisters.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-              <tr>
-                <td class="number-column">9</td>
-                <td class="what-column"><span>food</span></td>
-                <td class="name-column">
-                  <div class="item-text">
-                    <a href="https://maps.app.goo.gl/o1CoCY7rtbtFv8Nt9" target="_blank" rel="noopener noreferrer">Center4 Hamburgers</a>
-                    <span class="item-details"><span class="detail detail-type">food</span><span class="detail detail-by">Takayama, Japan</span></span>
-                  </div>
-                </td>
-                <td class="by-column"><span>Takayama, Japan</span></td>
-                <td class="length-column"></td>
-                <td class="image-column">
-                  <img src="assets/thumbnails/center4-hamburgers.webp" alt="" width="48" height="48" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+        <table>
+          <thead>
+            <tr>
+              <th class="number-column">#</th>
+              <th class="what-column">what</th>
+              <th class="name-column">name</th>
+              <th class="by-column">by</th>
+              <th class="length-column">length</th>
+              <th class="image-column" aria-label="image"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="number-column">1</td>
+              <td class="what-column"><span>poem</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://www.poetryfoundation.org/poems/1626022/the-two-headed-calf" target="_blank"
+                    rel="noopener noreferrer">The Two-Headed Calf</a>
+                  <span class="item-details"><span class="detail detail-type">poem</span><span
+                      class="detail detail-length">9 lines</span><span class="detail detail-by">Laura
+                      Gilpin</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>Laura Gilpin</span></td>
+              <td class="length-column"><span>9 lines</span></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/two-headed-calf.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+            <tr>
+              <td class="number-column">2</td>
+              <td class="what-column"><span>short story</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://static1.squarespace.com/static/509c7909e4b0e15f9ab04cd6/t/578c2552bebafb8c814a511e/1468802386511/Marquez_A+Very+Old+Man+With+Enormous+Wings.pdf"
+                    target="_blank" rel="noopener noreferrer">A Very Old Man With Enormous Wings</a>
+                  <span class="item-details"><span class="detail detail-type">short story</span><span
+                      class="detail detail-length">2834 words</span><span class="detail detail-by">Gabriel García
+                      Márquez</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>Gabriel García Márquez</span></td>
+              <td class="length-column"><span>2834 words</span></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/marquez.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+            <tr>
+              <td class="number-column">3</td>
+              <td class="what-column"><span>anime</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://www.imdb.com/title/tt1017084/?ref_=ext_shr_lnk" target="_blank"
+                    rel="noopener noreferrer">Mushishi S1E19: String of Heaven</a>
+                  <span class="item-details"><span class="detail detail-type">anime</span><span
+                      class="detail detail-length">23m</span><span class="detail detail-by">Yuki
+                      Urushibara</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>Yuki Urushibara</span></td>
+              <td class="length-column"><span>23m</span></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/mushishi.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+            <tr>
+              <td class="number-column">4</td>
+              <td class="what-column"><span>podcast</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://www.thisamericanlife.org/765/off-course" target="_blank"
+                    rel="noopener noreferrer">This American Life #765: Off Course</a>
+                  <span class="item-details"><span class="detail detail-type">podcast</span><span
+                      class="detail detail-length">1h 6m</span><span class="detail detail-by">This American
+                      Life</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>This American Life</span></td>
+              <td class="length-column"><span>1h 6m</span></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/off-course.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+            <tr>
+              <td class="number-column">5</td>
+              <td class="what-column"><span>film</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://www.imdb.com/title/tt0244316/" target="_blank" rel="noopener noreferrer">Yi Yi</a>
+                  <span class="item-details"><span class="detail detail-type">film</span><span
+                      class="detail detail-length">2h 54m</span><span class="detail detail-by">Edward Yang</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>Edward Yang</span></td>
+              <td class="length-column"><span>2h 54m</span></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/yi-yi.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+            <tr>
+              <td class="number-column">6</td>
+              <td class="what-column"><span>book</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://www.masoncurrey.com/daily-rituals" target="_blank" rel="noopener noreferrer">Daily
+                    Rituals</a>
+                  <span class="item-details"><span class="detail detail-type">book</span><span
+                      class="detail detail-length">278 pages</span><span class="detail detail-by">Mason
+                      Currey</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>Mason Currey</span></td>
+              <td class="length-column"><span>278 pages</span></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/daily-rituals.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+            <tr>
+              <td class="number-column">7</td>
+              <td class="what-column"><span>book</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://www.amazon.com/Mothers-Others-Evolutionary-Origins-Understanding/dp/0674060326"
+                    target="_blank" rel="noopener noreferrer">Mothers and Others</a>
+                  <span class="item-details"><span class="detail detail-type">book</span><span
+                      class="detail detail-length">432 pages</span><span class="detail detail-by">Sarah Blaffer
+                      Hrdy</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>Sarah Blaffer Hrdy</span></td>
+              <td class="length-column"><span>432 pages</span></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/mothers.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+            <tr>
+              <td class="number-column">8</td>
+              <td class="what-column"><span>novel</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://www.amazon.com/Makioka-Sisters-Junichiro-Tanizaki/dp/0679761640" target="_blank"
+                    rel="noopener noreferrer">Makioka Sisters</a>
+                  <span class="item-details"><span class="detail detail-type">novel</span><span
+                      class="detail detail-length">544 pages</span><span class="detail detail-by">Jun'ichirō
+                      Tanizaki</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>Jun'ichirō Tanizaki</span></td>
+              <td class="length-column"><span>544 pages</span></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/makioka-sisters.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+            <tr>
+              <td class="number-column">9</td>
+              <td class="what-column"><span>food</span></td>
+              <td class="name-column">
+                <div class="item-text">
+                  <a href="https://maps.app.goo.gl/o1CoCY7rtbtFv8Nt9" target="_blank" rel="noopener noreferrer">Center4
+                    Hamburgers</a>
+                  <span class="item-details"><span class="detail detail-type">food</span><span
+                      class="detail detail-by">Takayama, Japan</span></span>
+                </div>
+              </td>
+              <td class="by-column"><span>Takayama, Japan</span></td>
+              <td class="length-column"></td>
+              <td class="image-column">
+                <img src="assets/thumbnails/center4-hamburgers.webp" alt="" width="48" height="48" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
-    </main>
-    <script>
-      (() => {
-        const highlightedSelector = ".sidenote-ref.is-highlighted, .sidenote.is-highlighted, .mobile-footnote.is-highlighted";
-        const refs = Array.from(document.querySelectorAll(".sidenote-ref"));
-        const footnoteBackrefs = Array.from(document.querySelectorAll(".mobile-footnote > .sidenote-backref"));
-        const mobileFootnotesQuery = window.matchMedia("(width < 768px)");
-        const highlightDurationMs = 900;
-        let highlightTimerId;
-        const refControls = [];
 
-        const getNoteClass = (element) =>
-          Array.from(element.classList).find((className) => className.startsWith("note-"));
+      <section aria-labelledby="music-heading">
+        <h3 id="music-heading">Music</h3>
 
-        const clearHighlights = () => {
-          if (highlightTimerId) {
-            window.clearTimeout(highlightTimerId);
-            highlightTimerId = undefined;
-          }
+        <p>
+          I am kind of always listening to music. I like a lot of different
+          genres from r&amp;b to post-classical to midwest emo.
+        </p>
 
-          document
-            .querySelectorAll(highlightedSelector)
-            .forEach((element) => element.classList.remove("is-highlighted"));
+        <table class="music-table">
+          <caption>
+            <a class="music-table-link" href="https://open.spotify.com/playlist/5EdFUeg8NEAqOE84hEVQqO"
+              aria-label="Open the songs I like a lot playlist on Spotify" target="_blank" rel="noopener noreferrer">
+              <span class="music-table-caption-text">Some songs I like a lot:</span>
+              <img class="music-table-caption-spotify-icon"
+                src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16" height="16" />
+            </a>
 
-          refs.forEach((ref) => {
-            if (ref.hasAttribute("aria-pressed")) {
-              ref.setAttribute("aria-pressed", "false");
-            }
-          });
-          footnoteBackrefs.forEach((backref) => {
-            if (backref.hasAttribute("aria-pressed")) {
-              backref.setAttribute("aria-pressed", "false");
-            }
-          });
-        };
+          </caption>
+          <thead>
+            <tr>
+              <th class="number-column">#</th>
+              <th colspan="2">title</th>
+              <th class="links-column" aria-label="music links"></th>
+              <th class="artist-column">artist</th>
+              <th class="notes-column">my notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="number-column">1</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/no-szns.jpg" alt="NO SZNS album cover"
+                  width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">NO SZNS</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Jean Dawson,
+                      SZA</span><span class="detail detail-notes">ethereal r&amp;b pop mishmash</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/0dn6S6lJqAIQg90kMmWtVj"
+                    aria-label="Listen to NO SZNS on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=aLNFIo292J4"
+                    aria-label="Watch NO SZNS on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Jean Dawson, SZA</td>
+              <td class="notes-column">ethereal r&amp;b pop mishmash</td>
+            </tr>
+            <tr>
+              <td class="number-column">2</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/wave-of-light.jpg"
+                  alt="Wave of Light album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Wave of Light</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Masakatsu
+                      Takagi</span><span class="detail detail-notes">piano like a wave of light</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/1Pl8DfOe11FpxCgAHFPoNz"
+                    aria-label="Listen to Wave of Light on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=pDExDoMD7Sk"
+                    aria-label="Watch Wave of Light on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Masakatsu Takagi</td>
+              <td class="notes-column">piano like a wave of light</td>
+            </tr>
+            <tr>
+              <td class="number-column">3</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/yyz.jpg" alt="YYZ album cover"
+                  width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">YYZ</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Rush</span><span
+                      class="detail detail-notes">ding da ding ding ding</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/3lpDrxUkr0tIe1kmJvdK7d" aria-label="Listen to YYZ on Spotify"
+                    target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=1eSlvoO3Vw8"
+                    aria-label="Watch YYZ on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Rush</td>
+              <td class="notes-column">ding da ding ding ding</td>
+            </tr>
+            <tr>
+              <td class="number-column">4</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/school-social.jpg"
+                  alt="School Social album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">School Social</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Invalids</span><span
+                      class="detail detail-notes">mathy math rock</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/5lTp6k2CsTfd4HNz6wzWaI"
+                    aria-label="Listen to School Social on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=EBZ_9hy1Hro"
+                    aria-label="Watch School Social on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Invalids</td>
+              <td class="notes-column">mathy math rock</td>
+            </tr>
+            <tr>
+              <td class="number-column">5</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/love-is-everywhere.jpg"
+                  alt="Love Is Everywhere album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Love Is Everywhere</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Pharoah
+                      Sanders</span><span class="detail detail-notes">cosmic, spiritual jazz</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/4IIxBK0L8uj7viwxhmuSc4"
+                    aria-label="Listen to Love Is Everywhere on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=zySVXOsrd6Y"
+                    aria-label="Watch Love Is Everywhere on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Pharoah Sanders</td>
+              <td class="notes-column">cosmic, spiritual jazz</td>
+            </tr>
+            <tr>
+              <td class="number-column">6</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/amour.jpg" alt="Amour album cover"
+                  width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Amour</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Jean-Michel
+                      Blais</span><span class="detail detail-notes">beautiful post-classical</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/47kA4ykK0Rlwjf8oV2HMo7" aria-label="Listen to Amour on Spotify"
+                    target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=tFZqPCg8PCQ"
+                    aria-label="Watch Amour on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Jean-Michel Blais</td>
+              <td class="notes-column">beautiful post-classical</td>
+            </tr>
+            <tr>
+              <td class="number-column">7</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/reaper.jpg" alt="Reaper album cover"
+                  width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Reaper</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Clairo</span><span
+                      class="detail detail-notes">soft, like pillow</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/2P0qa2otcQdjrnypyueuJl"
+                    aria-label="Listen to Reaper on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=SZf2hDnHr2c"
+                    aria-label="Watch Reaper on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Clairo</td>
+              <td class="notes-column">soft, like pillow</td>
+            </tr>
+            <tr>
+              <td class="number-column">8</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/untitled-06.jpg"
+                  alt="untitled 06 album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">untitled 06</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Kendrick Lamar</span><span
+                      class="detail detail-notes">jazzy jazz rap</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/4M2t7bP4Mq87mGMn0PObUX"
+                    aria-label="Listen to untitled 06 on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=fZ2pXyBBwsQ"
+                    aria-label="Watch untitled 06 on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Kendrick Lamar</td>
+              <td class="notes-column">jazzy jazz rap</td>
+            </tr>
+            <tr>
+              <td class="number-column">9</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/northern-attitude.jpg"
+                  alt="Northern Attitude album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Northern Attitude</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Noah Kahan,
+                      Hozier</span><span class="detail detail-notes">folk pop, like gospel</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/4oEf84vBYVftf6KmZexhVo"
+                    aria-label="Listen to Northern Attitude on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=uMCv9djEm1k"
+                    aria-label="Watch Northern Attitude on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Noah Kahan, Hozier</td>
+              <td class="notes-column">folk pop, like gospel</td>
+            </tr>
+            <tr>
+              <td class="number-column">10</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/grieving.jpg"
+                  alt="Grieving album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Grieving</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Leith Ross</span><span
+                      class="detail detail-notes">happy sad indie, make me cry ;-;</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/6i3WSOFSYym4wrBmuhEyYs"
+                    aria-label="Listen to Grieving on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=a44QOXHzGb0"
+                    aria-label="Watch Grieving on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Leith Ross</td>
+              <td class="notes-column">happy sad indie, make me cry ;-;</td>
+            </tr>
+            <tr>
+              <td class="number-column">11</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/naruto-themed-sexting.jpg"
+                  alt="Naruto Themed Sexting album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Naruto Themed Sexting</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Panucci's
+                      Pizza</span><span class="detail detail-notes">folky midwest emo</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/3yoGVIY5OrRIBvNA9PYOS7"
+                    aria-label="Listen to Naruto Themed Sexting on Spotify" target="_blank"
+                    rel="noopener noreferrer"><img src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt=""
+                      width="16" height="16" /></a><a class="icon-link"
+                    href="https://www.youtube.com/watch?v=yQp9jIgLyKI"
+                    aria-label="Watch Naruto Themed Sexting on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Panucci's Pizza</td>
+              <td class="notes-column">folky midwest emo</td>
+            </tr>
+            <tr>
+              <td class="number-column">12</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/ultralight-beam.jpg"
+                  alt="Ultralight Beam album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Ultralight Beam</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Kanye</span><span
+                      class="detail detail-notes">WE DON'T WANT NO DEVILS IN THE HOUSE</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/1eQBEelI2NCy7AUTerX0KS"
+                    aria-label="Listen to Ultralight Beam on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=6oHdAA3AqnE"
+                    aria-label="Watch Ultralight Beam on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Kanye</td>
+              <td class="notes-column">WE DON'T WANT NO DEVILS IN THE HOUSE</td>
+            </tr>
+            <tr>
+              <td class="number-column">13</td>
+              <td class="cover-column"><img class="album-cover" src="assets/music/voice-of-the-soul.jpg"
+                  alt="Voice of the Soul album cover" width="48" height="48" loading="lazy" /></td>
+              <td class="title-column">
+                <div class="item-text">
+                  <span class="music-title-name">Voice of the Soul</span>
+                  <span class="item-details music-details"><span class="detail detail-artist">Death</span><span
+                      class="detail detail-notes">beautiful, crushing metal</span></span>
+                </div>
+              </td>
+              <td class="links-column"><span class="song-links"><a class="icon-link"
+                    href="https://open.spotify.com/track/69Yia3qCLw6N9U80WhLwLn"
+                    aria-label="Listen to Voice of the Soul on Spotify" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
+                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=s2EJ1AqPIPg"
+                    aria-label="Watch Voice of the Soul on YouTube" target="_blank" rel="noopener noreferrer"><img
+                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+              </td>
+              <td class="artist-column">Death</td>
+              <td class="notes-column">beautiful, crushing metal</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const highlightedSelector = ".sidenote-ref.is-highlighted, .sidenote.is-highlighted, .mobile-footnote.is-highlighted";
+      const refs = Array.from(document.querySelectorAll(".sidenote-ref"));
+      const footnoteBackrefs = Array.from(document.querySelectorAll(".mobile-footnote > .sidenote-backref"));
+      const mobileFootnotesQuery = window.matchMedia("(width < 768px)");
+      const highlightDurationMs = 900;
+      let highlightTimerId;
+      const refControls = [];
 
-        const highlightNote = (noteClass) => {
-          document.querySelectorAll(`.sidenote-ref.${noteClass}`).forEach((ref) => {
-            ref.classList.add("is-highlighted");
-            ref.setAttribute("aria-pressed", "true");
+      const getNoteClass = (element) =>
+        Array.from(element.classList).find((className) => className.startsWith("note-"));
 
-            const sidenoteId = ref.querySelector(".sidenote-number")?.getAttribute("aria-describedby");
+      const clearHighlights = () => {
+        if (highlightTimerId) {
+          window.clearTimeout(highlightTimerId);
+          highlightTimerId = undefined;
+        }
 
-            if (sidenoteId) {
-              document.getElementById(sidenoteId)?.classList.add("is-highlighted");
-            }
-          });
-
-          document.querySelectorAll(`.mobile-footnote.${noteClass}`).forEach((footnote) => {
-            footnote.classList.add("is-highlighted");
-            footnote
-              .querySelector(".sidenote-backref")
-              ?.setAttribute("aria-pressed", "true");
-          });
-        };
-
-        const flashNote = (noteClass, event) => {
-          event.stopPropagation();
-          clearHighlights();
-          void document.body.offsetWidth;
-          highlightNote(noteClass);
-
-          highlightTimerId = window.setTimeout(() => {
-            highlightTimerId = undefined;
-            clearHighlights();
-          }, highlightDurationMs);
-        };
+        document
+          .querySelectorAll(highlightedSelector)
+          .forEach((element) => element.classList.remove("is-highlighted"));
 
         refs.forEach((ref) => {
-          const noteClass = getNoteClass(ref);
-
-          if (!noteClass) {
-            return;
+          if (ref.hasAttribute("aria-pressed")) {
+            ref.setAttribute("aria-pressed", "false");
           }
+        });
+        footnoteBackrefs.forEach((backref) => {
+          if (backref.hasAttribute("aria-pressed")) {
+            backref.setAttribute("aria-pressed", "false");
+          }
+        });
+      };
 
-          const handleClick = (event) => flashNote(noteClass, event);
-          const handleKeydown = (event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              flashNote(noteClass, event);
-            }
-          };
+      const highlightNote = (noteClass) => {
+        document.querySelectorAll(`.sidenote-ref.${noteClass}`).forEach((ref) => {
+          ref.classList.add("is-highlighted");
+          ref.setAttribute("aria-pressed", "true");
 
-          refControls.push({ ref, handleClick, handleKeydown, isActive: false });
+          const sidenoteId = ref.querySelector(".sidenote-number")?.getAttribute("aria-describedby");
+
+          if (sidenoteId) {
+            document.getElementById(sidenoteId)?.classList.add("is-highlighted");
+          }
         });
 
-        const setMobileRefControls = () => {
-          refControls.forEach((control) => {
-            if (mobileFootnotesQuery.matches && !control.isActive) {
-              control.ref.setAttribute("role", "button");
-              control.ref.setAttribute("tabindex", "0");
-              control.ref.setAttribute("aria-pressed", "false");
-              control.ref.addEventListener("click", control.handleClick);
-              control.ref.addEventListener("keydown", control.handleKeydown);
-              control.isActive = true;
-              return;
-            }
+        document.querySelectorAll(`.mobile-footnote.${noteClass}`).forEach((footnote) => {
+          footnote.classList.add("is-highlighted");
+          footnote
+            .querySelector(".sidenote-backref")
+            ?.setAttribute("aria-pressed", "true");
+        });
+      };
 
-            if (!mobileFootnotesQuery.matches && control.isActive) {
-              control.ref.removeAttribute("role");
-              control.ref.removeAttribute("tabindex");
-              control.ref.removeAttribute("aria-pressed");
-              control.ref.removeEventListener("click", control.handleClick);
-              control.ref.removeEventListener("keydown", control.handleKeydown);
-              control.isActive = false;
-            }
-          });
+      const flashNote = (noteClass, event) => {
+        event.stopPropagation();
+        clearHighlights();
+        void document.body.offsetWidth;
+        highlightNote(noteClass);
+
+        highlightTimerId = window.setTimeout(() => {
+          highlightTimerId = undefined;
+          clearHighlights();
+        }, highlightDurationMs);
+      };
+
+      refs.forEach((ref) => {
+        const noteClass = getNoteClass(ref);
+
+        if (!noteClass) {
+          return;
+        }
+
+        const handleClick = (event) => flashNote(noteClass, event);
+        const handleKeydown = (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            flashNote(noteClass, event);
+          }
         };
 
-        setMobileRefControls();
-        mobileFootnotesQuery.addEventListener("change", () => {
-          clearHighlights();
-          setMobileRefControls();
-        });
+        refControls.push({ ref, handleClick, handleKeydown, isActive: false });
+      });
 
-        footnoteBackrefs.forEach((backref) => {
-          const noteClass = getNoteClass(backref.closest(".mobile-footnote"));
-
-          if (!noteClass) {
+      const setMobileRefControls = () => {
+        refControls.forEach((control) => {
+          if (mobileFootnotesQuery.matches && !control.isActive) {
+            control.ref.setAttribute("role", "button");
+            control.ref.setAttribute("tabindex", "0");
+            control.ref.setAttribute("aria-pressed", "false");
+            control.ref.addEventListener("click", control.handleClick);
+            control.ref.addEventListener("keydown", control.handleKeydown);
+            control.isActive = true;
             return;
           }
 
-          backref.setAttribute("role", "button");
-          backref.setAttribute("tabindex", "0");
-          backref.setAttribute("aria-pressed", "false");
-
-          backref.addEventListener("click", (event) => flashNote(noteClass, event));
-          backref.addEventListener("keydown", (event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              flashNote(noteClass, event);
-            }
-          });
-        });
-
-        document.addEventListener("click", clearHighlights);
-        document.addEventListener("keydown", (event) => {
-          if (event.key === "Escape") {
-            clearHighlights();
+          if (!mobileFootnotesQuery.matches && control.isActive) {
+            control.ref.removeAttribute("role");
+            control.ref.removeAttribute("tabindex");
+            control.ref.removeAttribute("aria-pressed");
+            control.ref.removeEventListener("click", control.handleClick);
+            control.ref.removeEventListener("keydown", control.handleKeydown);
+            control.isActive = false;
           }
         });
-      })();
-    </script>
-  </body>
+      };
+
+      setMobileRefControls();
+      mobileFootnotesQuery.addEventListener("change", () => {
+        clearHighlights();
+        setMobileRefControls();
+      });
+
+      footnoteBackrefs.forEach((backref) => {
+        const noteClass = getNoteClass(backref.closest(".mobile-footnote"));
+
+        if (!noteClass) {
+          return;
+        }
+
+        backref.setAttribute("role", "button");
+        backref.setAttribute("tabindex", "0");
+        backref.setAttribute("aria-pressed", "false");
+
+        backref.addEventListener("click", (event) => flashNote(noteClass, event));
+        backref.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            flashNote(noteClass, event);
+          }
+        });
+      });
+
+      document.addEventListener("click", clearHighlights);
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          clearHighlights();
+        }
+      });
+    })();
+  </script>
+</body>
+
 </html>

@@ -348,17 +348,13 @@ table {
 thead,
 .what-column,
 .by-column,
-.length-column {
+.length-column,
+.music-table .artist-column,
+.music-table .notes-column {
     display: none;
 }
 
-.image-column img {
-    display: block;
-    inline-size: 48px;
-    block-size: 48px;
-    object-fit: cover;
-}
-
+/* shared by both tables */
 .item-text {
     min-inline-size: 0;
 }
@@ -372,9 +368,70 @@ thead,
 }
 
 .detail-by::before,
-.detail-length::before {
+.detail-length::before,
+.detail-notes::before {
     content: "·"; /* add interpunct */
     margin-inline: 0.35em;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+}
+
+.icon-link img {
+    inline-size: 16px;
+    block-size: 16px;
+    object-fit: contain;
+}
+
+/* favorites table */
+.image-column img {
+    display: block;
+    inline-size: 48px;
+    block-size: 48px;
+    object-fit: cover;
+}
+
+/* music table */
+.album-cover {
+    display: inline-block;
+    min-inline-size: 48px;
+}
+
+.music-title-name {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.music-table-link {
+    text-decoration: none;
+}
+
+.music-table-caption-text {
+    text-decoration: underline;
+}
+
+.music-table-caption-spotify-icon {
+    display: inline-block;
+    vertical-align: -0.125em;
+}
+
+.links-column {
+    inline-size: 3.5rem;
+    padding-inline-end: 0;
+    white-space: nowrap;
+}
+
+.song-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* phone-only hacks */
@@ -393,7 +450,32 @@ thead,
         padding-inline-end: 0;
     }
 
+    .cover-column {
+        inline-size: calc(48px + 0.5em);
+        padding-inline-end: 0.5em;
+    }
+
+    .links-column {
+        inline-size: 3rem;
+    }
+
+    .song-links {
+        gap: 0.35rem;
+    }
+
+    .music-table .album-cover {
+        display: block;
+        inline-size: 48px;
+        block-size: 48px;
+        max-inline-size: none;
+        object-fit: cover;
+    }
+
     .name-column {
+        overflow: hidden;
+    }
+
+    .title-column {
         overflow: hidden;
     }
 
@@ -405,7 +487,23 @@ thead,
     }
 }
 
-/* reveal what-column */
+/*
+let music table links only appear on hover
+when user can hover AND big width
+*/
+@media (hover: hover) and (width >= 576px) {
+    .music-table tbody .song-links {
+        opacity: 0;
+        transition: opacity 0.15s ease-out;
+    }
+
+    .music-table tbody tr:hover .song-links,
+    .music-table tbody tr:focus-within .song-links {
+        opacity: 1;
+    }
+}
+
+/* small+: reveal what-column (favorites) and notes-column (music) */
 @media (width >= 576px) {
     thead {
         display: table-header-group;
@@ -415,16 +513,23 @@ thead,
         display: table-cell;
     }
 
+    .music-table .notes-column {
+        display: table-cell;
+    }
+
     .detail-type {
         display: none;
     }
 
-    .detail-length::before {
+    .detail-length::before,
+    .music-table .detail-notes {
         content: none;
+        display: none;
     }
 }
 
-/* reveal length-column */
+/* medium+: widen body, turn footnotes into margin sidenotes,
+   reveal length-column (favorites) and artist-column (music) */
 @media (width >= 768px) {
     body {
         margin-block-start: 6rem;
@@ -447,6 +552,14 @@ thead,
 
     .detail-by::before {
         content: none;
+    }
+
+    .music-table .artist-column {
+        display: table-cell;
+    }
+
+    .music-table .music-details {
+        display: none;
     }
 
     td {
@@ -495,7 +608,7 @@ thead,
     }
 }
 
-/* reveal by-column */
+/* large+: reveal by-column (favorites) */
 @media (width >= 992px) {
     .by-column {
         display: table-cell;
