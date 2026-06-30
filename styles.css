@@ -191,14 +191,20 @@ h3 {
 
 h4 {
     font-size: calc(1em * var(--heading-scale));
+    margin-block-start: 1.7rem;
+    margin-block-end: 1.2rem;
 }
 
 h5 {
     font-size: calc(0.83em * var(--heading-scale));
+    margin-block-start: 1.4rem;
+    margin-block-end: 1rem;
 }
 
 h6 {
     font-size: calc(0.67em * var(--heading-scale));
+    margin-block-start: 1.2rem;
+    margin-block-end: 0.8rem;
 }
 
 #primary-bio-section {
