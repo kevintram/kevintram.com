@@ -115,9 +115,10 @@ h1, h2, h3, h4, h5, h6 {
 
     --text-on-highlight: oklch(17.764% 0 none);
     --highlight-background: oklch(88.36% 0.12898 93.666);
-
+    
     --text-on-sidenote-highlight: var(--background);
     --sidenote-highlight-background: oklch(37.851% 0.19541 263.229);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -135,8 +136,8 @@ td {
     :root {
         --text-primary: oklch(89.755% 0 none);
         --background: oklch(19.573% 0 none);
-        
-        --text-on-sidenote-highlight: var(--text-primary);
+
+        --text-on-sidenote-highlight: var(--text-primary)
     }
 }
 
@@ -218,8 +219,21 @@ h6 {
     border-radius: 2px;
     line-height: 1;
     transition:
-        color 0.6s ease-out,
-        background 0.6s ease-out;
+        color 0.4s ease-out,
+        background-color 0.4s ease-out;
+}
+
+/*
+Highlight sidenote and footnote when either is hovered over.
+*/
+.note-group:has(.note-stealth-projects:hover) .note-stealth-projects,
+.note-group:has(.note-uf-year:hover) .note-uf-year,
+.note-group:has(.note-relocating:hover) .note-relocating,
+.note-group:has(.note-sivers:hover) .note-sivers,
+.note-group:has(.note-big-questions:hover) .note-big-questions {
+    background-color: var(--sidenote-highlight-background);
+    color: var(--text-on-sidenote-highlight);
+    transition-duration: 0s;
 }
 
 .sidenote-number {
@@ -229,8 +243,8 @@ h6 {
     line-height: 0;
     text-decoration: none;
     transition:
-        color 0.6s ease-out,
-        background 0.6s ease-out;
+        color 0.4s ease-out,
+        background-color 0.4s ease-out;
 }
 
 .sidenote {
@@ -238,8 +252,8 @@ h6 {
     font-size: 0.75rem;
     line-height: 1.35;
     transition:
-        color 0.6s ease-out,
-        background 0.6s ease-out;
+        color 0.4s ease-out,
+        background-color 0.4s ease-out;
 }
 
 .sidenote-backref {
@@ -253,10 +267,8 @@ h6 {
 }
 
 .mobile-footnote > .sidenote-backref {
-    cursor: pointer;
     line-height: 1;
     padding-block: 0.2rem;
-    touch-action: manipulation;
 }
 
 .mobile-footnotes {
@@ -275,65 +287,8 @@ h6 {
     border-radius: 2px;
     outline-offset: 2px;
     transition:
-        color 0.6s ease-out,
-        background 0.6s ease-out;
-}
-
-@media (width < 768px) {
-    .sidenote-ref,
-    .sidenote-number {
-        cursor: pointer;
-    }
-}
-
-.sidenote-ref.is-highlighted,
-.sidenote-ref.is-highlighted .sidenote-number,
-.sidenote.is-highlighted,
-.mobile-footnote.is-highlighted {
-    animation: footnote-highlight-flash 0.9s ease-out;
-}
-
-@keyframes footnote-highlight-flash {
-    0% {
-        color: var(--text-primary);
-        background: transparent;
-    }
-
-    14% {
-        color: var(--text-on-sidenote-highlight);
-        background: var(--sidenote-highlight-background);
-    }
-
-    100% {
-        color: var(--text-primary);
-        background: transparent;
-    }
-}
-
-@media (hover: hover) {
-    .sidenote-ref:hover,
-    .sidenote-ref:hover .sidenote-number,
-    .sidenote-number:hover,
-    .mobile-footnote:hover,
-    p:has(.note-stealth-projects:hover) + .mobile-footnotes .note-stealth-projects,
-    p:has(.note-uf-year:hover) + .mobile-footnotes .note-uf-year,
-    p:has(.note-relocating:hover) + .mobile-footnotes .note-relocating,
-    p:has(.note-sivers:hover) + .mobile-footnotes .note-sivers,
-    p:has(.note-big-questions:hover) + .mobile-footnotes .note-big-questions,
-    #primary-bio-section:has(.mobile-footnote.note-stealth-projects:hover) .sidenote-ref.note-stealth-projects,
-    #primary-bio-section:has(.mobile-footnote.note-uf-year:hover) .sidenote-ref.note-uf-year,
-    #primary-bio-section:has(.mobile-footnote.note-relocating:hover) .sidenote-ref.note-relocating,
-    #primary-bio-section:has(.mobile-footnote.note-sivers:hover) .sidenote-ref.note-sivers,
-    #primary-bio-section:has(.mobile-footnote.note-big-questions:hover) .sidenote-ref.note-big-questions,
-    #primary-bio-section:has(.mobile-footnote.note-stealth-projects:hover) .sidenote-ref.note-stealth-projects .sidenote-number,
-    #primary-bio-section:has(.mobile-footnote.note-uf-year:hover) .sidenote-ref.note-uf-year .sidenote-number,
-    #primary-bio-section:has(.mobile-footnote.note-relocating:hover) .sidenote-ref.note-relocating .sidenote-number,
-    #primary-bio-section:has(.mobile-footnote.note-sivers:hover) .sidenote-ref.note-sivers .sidenote-number,
-    #primary-bio-section:has(.mobile-footnote.note-big-questions:hover) .sidenote-ref.note-big-questions .sidenote-number {
-        color: var(--text-on-sidenote-highlight);
-        background: var(--sidenote-highlight-background);
-        transition-duration: 0s;
-    }
+        color 0.4s ease-out,
+        background-color 0.4s ease-out;
 }
 
 p {
@@ -628,20 +583,6 @@ when user can hover AND big width
 
     .mobile-footnotes {
         display: none;
-    }
-
-    @media (hover: hover) {
-        .sidenote-ref:hover .sidenote-number,
-        .sidenote-ref:has(+ .sidenote:hover) .sidenote-number,
-        .sidenote-ref:has(+ .sidenote:focus-within) .sidenote-number,
-        .sidenote-ref:hover + .sidenote,
-        .sidenote-ref:focus-within + .sidenote,
-        .sidenote:hover,
-        .sidenote:focus-within {
-            color: var(--text-on-sidenote-highlight);
-            background: var(--sidenote-highlight-background);
-            transition-duration: 0s;
-        }
     }
 }
 
