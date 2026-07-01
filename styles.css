@@ -363,10 +363,15 @@ thead,
     border: 0;
 }
 
-.icon-link img {
+.brand-icon {
+    display: block;
     inline-size: 1em;
     block-size: 1em;
-    object-fit: contain;
+    color: var(--text-primary);
+}
+
+.brand-icon-cutout {
+    fill: var(--background);
 }
 
 /* favorites table */

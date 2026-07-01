@@ -15,6 +15,20 @@
 </head>
 
 <body>
+  <svg aria-hidden="true" focusable="false" width="0" height="0" class="icon-sprite">
+    <symbol id="icon-spotify" viewBox="0 0 496 512">
+      <path fill="currentColor"
+        d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8Z" />
+      <path class="brand-icon-cutout"
+        d="M406.6 231.1c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3zm-31 76.2c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm-26.9 65.6c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4z" />
+    </symbol>
+    <symbol id="icon-youtube" viewBox="54.079375 5.2758072 313.23315 216.02286">
+      <path fill="currentColor"
+        d="m 210.53177,221.29866 c 0,0 98.12514,0 122.46443,-6.48069 13.70449,-3.6724 24.01093,-14.2575 27.62825,-27.32688 6.68807,-23.97854 6.68807,-74.41988 6.68807,-74.41988 0,0 0,-50.117297 -6.68807,-73.879819 C 357.00713,25.79798 346.70069,15.42887 332.9962,11.864515 308.65691,5.2758072 210.53177,5.2758072 210.53177,5.2758072 c 0,0 -97.9062,0 -122.135976,6.5887078 -13.485335,3.564355 -24.010529,13.933465 -27.847831,27.326876 -6.468588,23.762522 -6.468588,73.879819 -6.468588,73.879819 0,0 0,50.44134 6.468588,74.41988 3.837302,13.06938 14.362496,23.65448 27.847831,27.32688 24.229776,6.48069 122.135976,6.48069 122.135976,6.48069 z" />
+      <path class="brand-icon-cutout" d="M 259.30109,113.28723 178.29251,67.382379 v 91.809711 z" />
+    </symbol>
+  </svg>
+
   <main>
     <h1>Kevin Tram</h1>
 
@@ -297,7 +311,7 @@
         <h3 id="music-heading">Music</h3>
 
         <p>
-          I'm kind of always listening to music. 
+          I'm kind of always listening to music.
           My tastes are eclectic: from r&amp;b to post-classical to midwest emo.
         </p>
 
@@ -305,8 +319,8 @@
           Some songs I like a lot
           <a class="music-table-link" href="https://open.spotify.com/playlist/5EdFUeg8NEAqOE84hEVQqO"
             aria-label="Open the songs I like a lot playlist on Spotify" target="_blank" rel="noopener noreferrer">
-            <img class="music-table-caption-spotify-icon"
-              src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16" height="16" />
+            <svg class="brand-icon spotify-icon music-table-caption-spotify-icon" aria-hidden="true"><use
+                href="#icon-spotify"></use></svg>
           </a>
         </h4>
 
@@ -334,11 +348,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/0dn6S6lJqAIQg90kMmWtVj"
-                    aria-label="Listen to NO SZNS on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=aLNFIo292J4"
-                    aria-label="Watch NO SZNS on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to NO SZNS on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=aLNFIo292J4"
+                    aria-label="Watch NO SZNS on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Jean Dawson, SZA</td>
               <td class="notes-column">[ethereal r&amp;b pop mishmash]</td>
@@ -356,11 +367,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/1Pl8DfOe11FpxCgAHFPoNz"
-                    aria-label="Listen to Wave of Light on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=pDExDoMD7Sk"
-                    aria-label="Watch Wave of Light on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to Wave of Light on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=pDExDoMD7Sk"
+                    aria-label="Watch Wave of Light on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Masakatsu Takagi</td>
               <td class="notes-column">[piano like a wave of light]</td>
@@ -378,11 +386,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/3lpDrxUkr0tIe1kmJvdK7d" aria-label="Listen to YYZ on Spotify"
-                    target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=1eSlvoO3Vw8"
-                    aria-label="Watch YYZ on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=1eSlvoO3Vw8"
+                    aria-label="Watch YYZ on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Rush</td>
               <td class="notes-column">[ding da ding ding ding]</td>
@@ -400,11 +405,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/5lTp6k2CsTfd4HNz6wzWaI"
-                    aria-label="Listen to School Social on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=EBZ_9hy1Hro"
-                    aria-label="Watch School Social on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to School Social on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=EBZ_9hy1Hro"
+                    aria-label="Watch School Social on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Invalids</td>
               <td class="notes-column">[mathy math rock]</td>
@@ -422,11 +424,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/4IIxBK0L8uj7viwxhmuSc4"
-                    aria-label="Listen to Love Is Everywhere on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=zySVXOsrd6Y"
-                    aria-label="Watch Love Is Everywhere on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to Love Is Everywhere on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=zySVXOsrd6Y"
+                    aria-label="Watch Love Is Everywhere on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Pharoah Sanders</td>
               <td class="notes-column">[cosmic, spiritual jazz]</td>
@@ -444,11 +443,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/47kA4ykK0Rlwjf8oV2HMo7" aria-label="Listen to Amour on Spotify"
-                    target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=tFZqPCg8PCQ"
-                    aria-label="Watch Amour on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=tFZqPCg8PCQ"
+                    aria-label="Watch Amour on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Jean-Michel Blais</td>
               <td class="notes-column">[beautiful post-classical]</td>
@@ -466,11 +462,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/2P0qa2otcQdjrnypyueuJl"
-                    aria-label="Listen to Reaper on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=SZf2hDnHr2c"
-                    aria-label="Watch Reaper on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to Reaper on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=SZf2hDnHr2c"
+                    aria-label="Watch Reaper on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Clairo</td>
               <td class="notes-column">[soft, like pillow]</td>
@@ -488,11 +481,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/4M2t7bP4Mq87mGMn0PObUX"
-                    aria-label="Listen to untitled 06 on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=fZ2pXyBBwsQ"
-                    aria-label="Watch untitled 06 on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to untitled 06 on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=fZ2pXyBBwsQ"
+                    aria-label="Watch untitled 06 on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Kendrick Lamar</td>
               <td class="notes-column">[jazzy jazz rap]</td>
@@ -510,11 +500,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/4oEf84vBYVftf6KmZexhVo"
-                    aria-label="Listen to Northern Attitude on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=uMCv9djEm1k"
-                    aria-label="Watch Northern Attitude on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to Northern Attitude on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=uMCv9djEm1k"
+                    aria-label="Watch Northern Attitude on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Noah Kahan, Hozier</td>
               <td class="notes-column">[folk pop, like gospel]</td>
@@ -532,11 +519,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/6i3WSOFSYym4wrBmuhEyYs"
-                    aria-label="Listen to Grieving on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=a44QOXHzGb0"
-                    aria-label="Watch Grieving on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to Grieving on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=a44QOXHzGb0"
+                    aria-label="Watch Grieving on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Leith Ross</td>
               <td class="notes-column">[happy sad indie, make me cry ;-;]</td>
@@ -555,11 +539,9 @@
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/3yoGVIY5OrRIBvNA9PYOS7"
                     aria-label="Listen to Naruto Themed Sexting on Spotify" target="_blank"
-                    rel="noopener noreferrer"><img src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt=""
-                      width="16" height="16" /></a><a class="icon-link"
+                    rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link"
                     href="https://www.youtube.com/watch?v=yQp9jIgLyKI"
-                    aria-label="Watch Naruto Themed Sexting on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Watch Naruto Themed Sexting on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Panucci's Pizza</td>
               <td class="notes-column">[folky midwest emo]</td>
@@ -577,11 +559,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/1eQBEelI2NCy7AUTerX0KS"
-                    aria-label="Listen to Ultralight Beam on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=6oHdAA3AqnE"
-                    aria-label="Watch Ultralight Beam on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to Ultralight Beam on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=6oHdAA3AqnE"
+                    aria-label="Watch Ultralight Beam on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Kanye</td>
               <td class="notes-column">[WE DON'T WANT NO DEVILS IN THE HOUSE]</td>
@@ -599,11 +578,8 @@
               </td>
               <td class="links-column"><span class="song-links"><a class="icon-link"
                     href="https://open.spotify.com/track/69Yia3qCLw6N9U80WhLwLn"
-                    aria-label="Listen to Voice of the Soul on Spotify" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/spotify/Spotify_Primary_Logo_RGB_White.png" alt="" width="16"
-                      height="16" /></a><a class="icon-link" href="https://www.youtube.com/watch?v=s2EJ1AqPIPg"
-                    aria-label="Watch Voice of the Soul on YouTube" target="_blank" rel="noopener noreferrer"><img
-                      src="assets/icons/youtube/yt_icon_white_digital.png" alt="" width="16" height="16" /></a></span>
+                    aria-label="Listen to Voice of the Soul on Spotify" target="_blank" rel="noopener noreferrer"><svg class="brand-icon spotify-icon" aria-hidden="true"><use href="#icon-spotify"></use></svg></a><a class="icon-link" href="https://www.youtube.com/watch?v=s2EJ1AqPIPg"
+                    aria-label="Watch Voice of the Soul on YouTube" target="_blank" rel="noopener noreferrer"><svg class="brand-icon youtube-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a></span>
               </td>
               <td class="artist-column">Death</td>
               <td class="notes-column">[beautiful, crushing metal]</td>
