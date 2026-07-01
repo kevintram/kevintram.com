@@ -146,6 +146,7 @@ body {
     margin-inline: auto;
 
     padding-inline: 1rem;
+    padding-block-end: 6rem;
 
     background-color: var(--background);
     color: var(--text-primary);
