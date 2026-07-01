@@ -164,8 +164,12 @@ mark {
     background: var(--highlight-background);
 }
 
-p, nav, table {
+p, table {
     margin-block-start: 1em;
+}
+
+nav {
+    margin-block-start: 2em;
 }
 
 caption {
