@@ -360,6 +360,7 @@ thead,
 
 .icon-link {
     display: inline-flex;
+    flex: 0 0 auto;
     align-items: center;
     justify-content: center;
     padding: 0.25em;
@@ -421,13 +422,15 @@ thead,
 }
 
 .links-column {
-    inline-size: 3.75em;
-    padding-inline-end: 0;
+    inline-size: 1%;
     white-space: nowrap;
+
+    padding-inline-end: 1em;
 }
 
 .song-links {
     display: flex;
+    inline-size: max-content;
     align-items: center;
     /* padding on .icon-link already adds space between glyphs, so keep this small */
     gap: 0.25em;
@@ -439,6 +442,10 @@ thead,
 @media (width < 576px) {
     table {
         table-layout: fixed;
+    }
+
+    .music-table {
+        table-layout: auto;
     }
 
     .number-column {
@@ -454,10 +461,6 @@ thead,
     .cover-column {
         inline-size: calc(48px + 0.5em);
         padding-inline-end: 0.5em;
-    }
-
-    .links-column {
-        inline-size: 3.5em;
     }
 
     .song-links {
@@ -477,6 +480,7 @@ thead,
     }
 
     .title-column {
+        max-inline-size: 0;
         overflow: hidden;
     }
 
