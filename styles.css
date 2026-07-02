@@ -368,14 +368,21 @@ thead,
 }
 
 .brand-icon {
-    display: block;
-    inline-size: 1em;
-    block-size: 1em;
     color: var(--text-primary);
 }
 
-.brand-icon-cutout {
-    fill: var(--background);
+.brand-icon--heading {
+    display: inline-block;
+    inline-size: 1em;
+    block-size: 1em;
+    margin-inline-start: 0.25em;
+    vertical-align: -0.15em;   
+}
+
+.brand-icon--table {
+    display: block;
+    inline-size: 1.5em;
+    block-size: 1.5em;
 }
 
 /* favorites table */
@@ -401,14 +408,6 @@ thead,
 
 .music-table-link {
     text-decoration: none;
-}
-
-.music-table-caption-spotify-icon {
-    display: inline-block;
-    inline-size: 1em;
-    block-size: 1em;
-    margin-inline-start: 0.25em;
-    vertical-align: -0.15em;
 }
 
 .music-table .detail-notes,
@@ -527,6 +526,11 @@ when user can hover AND big width
     .music-table .detail-notes {
         content: none;
         display: none;
+    }
+
+    .brand-icon--table {
+        inline-size: 1.2em;
+        block-size: 1.2em;
     }
 }
 
