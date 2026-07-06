@@ -118,7 +118,6 @@ h1, h2, h3, h4, h5, h6 {
     
     --text-on-sidenote-highlight: var(--background);
     --sidenote-highlight-background: oklch(37.851% 0.19541 263.229);
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -143,10 +142,10 @@ td {
 
 body {
     margin-block-start: 2rem;
+    margin-block-end: 3rem;
     margin-inline: auto;
-
+    
     padding-inline: 1rem;
-    padding-block-end: 6rem;
 
     background-color: var(--background);
     color: var(--text-primary);
@@ -179,7 +178,7 @@ caption {
 
 h1 {
     font-size: calc(2em * var(--heading-scale));
-    margin-block-start: 4rem;
+    margin-block-start: 3rem;
     margin-block-end: 1.5rem;
 }
 
@@ -541,7 +540,7 @@ when user can hover AND big width
    reveal length-column (favorites) and artist-column (music) */
 @media (width >= 768px) {
     body {
-        margin-block-start: 6rem;
+        margin-block-start: 4rem;
         margin-inline: unset;
         margin-inline-start: 12.5%;
 
