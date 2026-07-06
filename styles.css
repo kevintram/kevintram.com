@@ -234,8 +234,7 @@ Highlight sidenote and footnote when either is hovered over.
 .note-group:has(.note-stealth-projects:hover) .note-stealth-projects,
 .note-group:has(.note-uf-year:hover) .note-uf-year,
 .note-group:has(.note-relocating:hover) .note-relocating,
-.note-group:has(.note-sivers:hover) .note-sivers,
-.note-group:has(.note-big-questions:hover) .note-big-questions {
+.note-group:has(.note-sivers:hover) .note-sivers {
     background-color: var(--sidenote-highlight-background);
     color: var(--text-on-sidenote-highlight);
     transition-duration: 0s;
