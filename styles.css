@@ -167,10 +167,6 @@ p, table {
     margin-block-start: 1em;
 }
 
-nav {
-    margin-block-start: 2em;
-}
-
 caption {
     text-align: start;
     font-weight: bold;
@@ -296,6 +292,10 @@ Highlight sidenote and footnote when either is hovered over.
 
 p {
     max-inline-size: 30em;
+}
+
+.links {
+    margin-block-start: 1em;
 }
 
 /*
