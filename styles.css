@@ -134,7 +134,7 @@ td {
 @media (prefers-color-scheme: dark) {
     :root {
         --text-primary: oklch(89.755% 0 none);
-        --background: oklch(19.573% 0 none);
+        --background: oklch(17.6157% 0 none);
 
         --text-on-sidenote-highlight: var(--text-primary)
     }
