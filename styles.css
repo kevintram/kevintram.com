@@ -107,9 +107,8 @@ h1, h2, h3, h4, h5, h6 {
     --font-heading: 'Pixelify Sans', var(--font-body);
     --heading-scale: 1.2;
 
-    /* body's offset from the viewport edges; .full-bleed undoes it */
+    /* space between content and the viewport edges */
     --gutter: 1rem;
-    --gutter-start: var(--gutter);
 
     /* lets .full-bleed size against the viewport, minus any scrollbar */
     container-type: inline-size;
@@ -157,17 +156,21 @@ body {
     margin-inline: auto;
     
     padding-inline: var(--gutter);
+    /* 30em text + 18em sidenote margin, centered as one block */
+    max-inline-size: calc(48em + 2 * var(--gutter));
 
     color: var(--text-primary);
 }
 
 /*
-    Break out of body to span the viewport.
+    Break out of body to span the viewport, up to 70rem.
+    body is centered, so centering within it centers on the viewport.
     padding keeps the content off the viewport edges.
 */
 .full-bleed {
-    inline-size: 100cqw;
-    margin-inline-start: calc(-1 * var(--gutter-start));
+    --bleed-size: min(100cqw, 70rem);
+    inline-size: var(--bleed-size);
+    margin-inline-start: calc((100% - var(--bleed-size)) / 2);
     padding-inline: var(--gutter);
 }
 
@@ -566,20 +569,10 @@ when user can hover AND big width
     }
 }
 
-/* medium+: widen body, reveal length-column (favorites) and artist-column (music) */
+/* medium+: reveal length-column (favorites) and artist-column (music) */
 @media (width >= 768px) {
-    :root {
-        --gutter-start: 12.5cqw;
-    }
-
     body {
         margin-block-start: 4rem;
-        margin-inline: unset;
-        margin-inline-start: var(--gutter-start);
-
-        padding-inline: 0 var(--gutter);
-        inline-size: 87.5%;
-        max-inline-size: 62rem;
     }
 
     .length-column {
@@ -625,8 +618,8 @@ when user can hover AND big width
 
 /*
     turn footnotes into margin sidenotes.
-    sidenotes end 0.125w + 48em (paragraph + 60% of it) from the left,
-    so they only fit once the viewport is ~56em (~1008px at 18px) wide
+    they extend 60% of the 30em paragraph (18em) past it,
+    into the margin body's 48em max width reserves
 */
 @media (width >= 1024px) {
     .sidenote {
