@@ -107,6 +107,8 @@ h1, h2, h3, h4, h5, h6 {
     --font-heading: 'Pixelify Sans', var(--font-body);
     --heading-scale: 1.2;
 
+    /* 16px × 1.125 = 18px; % respects the user's browser default */
+    font-size: 112.5%;
     font-family: var(--font-body);
     font-synthesis: none;
 
@@ -387,15 +389,15 @@ thead,
 /* favorites table */
 .image-column img {
     display: block;
-    inline-size: 48px;
-    block-size: 48px;
+    inline-size: 3rem;
+    block-size: 3rem;
     object-fit: cover;
 }
 
 /* music table */
 .album-cover {
     display: inline-block;
-    min-inline-size: 48px;
+    min-inline-size: 3rem;
 }
 
 .music-title-name {
@@ -452,12 +454,12 @@ thead,
     }
 
     .image-column {
-        inline-size: 48px;
+        inline-size: 3rem;
         padding-inline-end: 0;
     }
 
     .cover-column {
-        inline-size: calc(48px + 0.5em);
+        inline-size: calc(3rem + 0.5em);
         padding-inline-end: 0.5em;
     }
 
@@ -467,8 +469,8 @@ thead,
 
     .music-table .album-cover {
         display: block;
-        inline-size: 48px;
-        block-size: 48px;
+        inline-size: 3rem;
+        block-size: 3rem;
         max-inline-size: none;
         object-fit: cover;
     }
@@ -536,8 +538,7 @@ when user can hover AND big width
     }
 }
 
-/* medium+: widen body, turn footnotes into margin sidenotes,
-   reveal length-column (favorites) and artist-column (music) */
+/* medium+: widen body, reveal length-column (favorites) and artist-column (music) */
 @media (width >= 768px) {
     body {
         margin-block-start: 4rem;
@@ -546,7 +547,7 @@ when user can hover AND big width
 
         padding-inline: 0 1rem;
         inline-size: 87.5%;
-        max-inline-size: 992px;
+        max-inline-size: 62rem;
     }
 
     .length-column {
@@ -573,7 +574,29 @@ when user can hover AND big width
     td {
         padding-block: 0;
     }
+}
 
+/* large+: reveal by-column (favorites) */
+@media (width >= 992px) {
+    .by-column {
+        display: table-cell;
+    }
+
+    .length-column {
+        inline-size: auto;
+    }
+
+    .item-details {
+        display: none;
+    }
+}
+
+/*
+    turn footnotes into margin sidenotes.
+    sidenotes end 0.125w + 48em (paragraph + 60% of it) from the left,
+    so they only fit once the viewport is ~56em (~1008px at 18px) wide
+*/
+@media (width >= 1024px) {
     .sidenote {
         display: inline;
         float: right;
@@ -598,21 +621,6 @@ when user can hover AND big width
     }
 
     .mobile-footnotes {
-        display: none;
-    }
-}
-
-/* large+: reveal by-column (favorites) */
-@media (width >= 992px) {
-    .by-column {
-        display: table-cell;
-    }
-
-    .length-column {
-        inline-size: auto;
-    }
-
-    .item-details {
         display: none;
     }
 }
