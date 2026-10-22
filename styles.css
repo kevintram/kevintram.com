@@ -136,10 +136,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.15;
 }
 
-td {
-    font-size: 90%;
-}
-
 /* Dark Mode! */
 @media (prefers-color-scheme: dark) {
     :root {
@@ -335,6 +331,7 @@ ul {
 th,
 td {
     padding-inline-end: 1em;
+    font-size: 90%;
 }
 
 th {
