@@ -122,6 +122,8 @@ h1, h2, h3, h4, h5, h6 {
 
     --text-primary: oklch(17.764% 0 none);
     --background: oklch(99.809% 0.00918 106.565);
+    /* mixed from the two above, so dark mode follows automatically */
+    --text-muted: color-mix(in oklch, var(--text-primary) 60%, var(--background));
 
     --text-on-highlight: oklch(17.764% 0 none);
     --highlight-background: oklch(88.36% 0.12898 93.666);
@@ -336,6 +338,7 @@ td {
 
 th {
     text-align: start;
+    color: var(--text-muted);
 }
 
 td {
